@@ -1,0 +1,16 @@
+.contact_head{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    position: relative;
+    h1{
+        padding-right: 100px;
+    }
+    button{
+        position: absolute;
+        top: 5px;
+        right: 0;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}

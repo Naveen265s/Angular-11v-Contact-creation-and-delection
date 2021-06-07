@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="contact_container">
+
+        <div class="contact_detail">
+
+            <app-contact-header (showAddContact)="contact_form_show=true"></app-contact-header>
+
+            <!-- <app-contact-search></app-contact-search> -->
+            <input type="text" name="search" placeholder="Search" (keyup)="contactList=contactListCopy;searchByNameFn()" [(ngModel)]="searchValue">
+
+            <app-contact-list-details [contactsList]="contactList" (editContact)="editPersonContact($event)" (deleteContact)="showDialogBox($event)"></app-contact-list-details>
+
+        </div>
+        <div class="contact_form" *ngIf="contact_form_show">
+            <app-contact-form [personContact]="personEmptyContact" (saveContactDtls)="savePersonContact($event)" (hideAddContactForm)="hideContactFormFn()"></app-contact-form>
+        </div>
+        <div class="contact_form" *ngIf="edit_contact_form">
+            <app-contact-form [personContact]="contactList[personId]" (hideAddContactForm)="hideAddContactFn()" (saveContactDtls)="editPersonDetails($event)"></app-contact-form>
+        </div>
+        <app-contact-dialogbox *ngIf = "dialogboxShow" (isCancelClicked)="dialogboxShow = false" (isDelClicked)="delContactItem()"></app-contact-dialogbox>
+    </div>
+    
+</div>
+

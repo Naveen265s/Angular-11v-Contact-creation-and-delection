@@ -1,0 +1,17 @@
+
+<table>
+    <caption></caption>
+    <thead>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contactsList; let i = index">
+            <td>{{contact.firstName}}</td>
+            <td><button (click)="editContactFn(i)">Edit</button></td>
+            <td><button (click)="deleteContactFn(i)">Delete</button></td>
+        </tr>
+    </tbody>
+    
+</table>

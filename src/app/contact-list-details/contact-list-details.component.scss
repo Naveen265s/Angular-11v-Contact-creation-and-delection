@@ -1,0 +1,13 @@
+table{
+    width: 100%; border-collapse: collapse;
+    th:not(:empty), td:not(:empty){
+        text-align: left;     border-bottom: 1px solid #ccc;
+        padding: 5px; 
+        &:first-child{
+            width: 60%;
+        }
+        &:last-child{
+            text-align: right;
+        }
+    }
+}

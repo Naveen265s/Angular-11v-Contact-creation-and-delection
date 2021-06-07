@@ -1,0 +1,42 @@
+.dialog_container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    &::after{
+        content: '';
+        background: rgba(0, 0, 0, 30%);
+        display: block;
+        width: 100%;
+        height: 100%; 
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .dialog_container_inner{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 500px;
+        z-index: 1;
+        background: #fff;
+        padding: 30px;
+        h4{
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .action{
+            div{
+                display: inline-block; margin: 0 5px;
+                
+            }
+            button{
+                border-radius: 0;
+                padding: 2px 10px;
+            }
+        }
+    }
+}

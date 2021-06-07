@@ -1,0 +1,61 @@
+<div class="contact_form">
+    <h4>Add Contact</h4>
+    <form action="">
+        <fieldset>
+            <div class="field">
+                <label for="">First Name</label>
+                <div class="control">
+                    <input type="text" placeholder="First Name" name="First"
+                     [(ngModel)]="firstName" #firstValue>
+                </div>
+            </div>
+            <div class="field">
+                <label for="">Last Name</label>
+                <div class="control">
+                    <input type="text" placeholder="Last Name" name="Last" 
+                     [(ngModel)]="lastName">
+                </div>
+            </div>
+            <div class="field">
+                <label for="">Company</label>
+                <div class="control">
+                    <input type="text" placeholder="Company" name="Company" 
+                    [(ngModel)]="company">
+                </div>
+            </div>
+            <div class="field">
+                <label for="">Email</label>
+                <div class="control">
+                    <input type="email" placeholder="Email" name="Email" 
+                    [(ngModel)]="email">
+                </div>
+            </div>
+            <div class="field">
+                <label for="">Primary Number</label>
+                <div class="control">
+                    <input type="number" placeholder="Primary Number" name="Phone"  
+                    [(ngModel)]="primaryMobile">
+                </div>
+            </div>
+            <button (click)="toggleMoreDetails()" [value]="showAlternateMobile?'Less Details':'More Details'">{{showAlternateMobile?'Less Details':'More Details'}}</button>
+            <div class="field" *ngIf="showAlternateMobile">
+                <label for="">Alternate Number</label>
+                <div class="control">
+                    <input type="number" placeholder="Alternate Number" name="secondPhone"  
+                    [(ngModel)]="alternateMobile">
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions">
+            <div class="secondary">
+                <button (click)="hideContactForm()">Cancel</button>
+            </div>
+            <div class="primary">
+                <button (click)="saveContactDetails()">Done</button>
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
